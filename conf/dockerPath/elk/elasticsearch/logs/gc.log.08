@@ -1,0 +1,15 @@
+[2019-07-27T09:44:30.762+0000][73][gc] Using Concurrent Mark Sweep
+[2019-07-27T09:44:30.762+0000][73][gc,heap,coops] Heap address: 0x00000000e0000000, size: 512 MB, Compressed Oops mode: 32-bit
+[2019-07-27T09:44:30.930+0000][73][safepoint    ] Entering safepoint region: EnableBiasedLocking
+[2019-07-27T09:44:30.930+0000][73][safepoint    ] Leaving safepoint region
+[2019-07-27T09:44:30.930+0000][73][safepoint    ] Total time for which application threads were stopped: 0.0002780 seconds, Stopping threads took: 0.0002328 seconds
+[2019-07-27T09:44:30.932+0000][73][gc,heap,exit ] Heap
+[2019-07-27T09:44:30.932+0000][73][gc,heap,exit ]  par new generation   total 153344K, used 5453K [0x00000000e0000000, 0x00000000ea660000, 0x00000000ea660000)
+[2019-07-27T09:44:30.932+0000][73][gc,heap,exit ]   eden space 136320K,   4% used [0x00000000e0000000, 0x00000000e05534b8, 0x00000000e8520000)
+[2019-07-27T09:44:30.932+0000][73][gc,heap,exit ]   from space 17024K,   0% used [0x00000000e8520000, 0x00000000e8520000, 0x00000000e95c0000)
+[2019-07-27T09:44:30.932+0000][73][gc,heap,exit ]   to   space 17024K,   0% used [0x00000000e95c0000, 0x00000000e95c0000, 0x00000000ea660000)
+[2019-07-27T09:44:30.932+0000][73][gc,heap,exit ]  concurrent mark-sweep generation total 353920K, used 0K [0x00000000ea660000, 0x0000000100000000, 0x0000000100000000)
+[2019-07-27T09:44:30.932+0000][73][gc,heap,exit ]  Metaspace       used 130K, capacity 4480K, committed 4480K, reserved 1056768K
+[2019-07-27T09:44:30.932+0000][73][gc,heap,exit ]   class space    used 2K, capacity 384K, committed 384K, reserved 1048576K
+[2019-07-27T09:44:30.932+0000][73][safepoint    ] Application time: 0.0009114 seconds
+[2019-07-27T09:44:30.932+0000][73][safepoint    ] Entering safepoint region: Halt
