@@ -11,14 +11,18 @@ services:
   redis:
     image: redis
     container_name: redis
+    command: redis-server --requirepass 123
     ports:
-      - "6379:6379"
+      - 6379:6379
 
   mongo:
     image: mongo
     container_name: mongo
     ports:
       - "27017:27017"
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: 123
 
   rabbitmq:
     image: rabbitmq:3.7-management-alpine
