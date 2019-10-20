@@ -34,3 +34,10 @@ services:
     ports:
       - "15672:15672"
       - "5672:5672"
+
+  zookeeper:
+    image: zookeeper
+    container_name: zookeeper
+    restart: always
+    ports:
+      - "2181:2181"
