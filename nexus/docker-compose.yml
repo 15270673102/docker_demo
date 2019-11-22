@@ -10,5 +10,3 @@ services:
       - "8083:8083"
       - "8084:8084"
       - "8085:8085"
-#    volumes:
-#      - /opt/nexus-data:/nexus-data/sonatype/nexus3
