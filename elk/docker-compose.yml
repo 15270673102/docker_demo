@@ -11,9 +11,9 @@ services:
       - "ES_JAVA_OPTS=-Xms2048m -Xmx2048m"
       - "discovery.type=single-node"
     volumes:
-      - /c/dockerPath/elk/elasticsearch/config/:/usr/share/elasticsearch/config/
-      - /c/dockerPath/elk/elasticsearch/data/:/usr/share/elasticsearch/data/
-      - /c/dockerPath/elk/elasticsearch/logs/:/usr/share/elasticsearch/logs/
+      - /config/elasticsearch/config/:/usr/share/elasticsearch/config/
+      - /config/elasticsearch/data/:/usr/share/elasticsearch/data/
+      - /config/elasticsearch/logs/:/usr/share/elasticsearch/logs/
 
   kibana:
     image: docker.elastic.co/kibana/kibana:7.2.0
@@ -22,7 +22,7 @@ services:
     ports:
       - "5601:5601"
     volumes:
-      - /c/dockerPath/elk/kibana/config/:/usr/share/kibana/config/
+      - /config/kibana/config/:/usr/share/kibana/config/
     links:
       - "elasticsearch"
     depends_on:
@@ -37,7 +37,7 @@ services:
       - "5043:5043"
       - "5044:5044"
     volumes:
-      - /c/dockerPath/elk/logstash/config/:/usr/share/logstash/config/
+      - /config/logstash/config/:/usr/share/logstash/config/
     links:
       - "elasticsearch"
     depends_on:
