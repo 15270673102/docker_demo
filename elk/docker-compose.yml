@@ -1,43 +1,47 @@
 version: '3'
 services:
   elasticsearch:
-    image: docker.elastic.co/elasticsearch/elasticsearch:7.2.0
+    image: elasticsearch:1.0
     container_name: elasticsearch
     restart: always
+    build:
+      context: .
+      dockerfile: config/elasticsearch/Dockerfile
     ports:
       - "9200:9200"
       - "9300:9300"
     environment:
-      - "ES_JAVA_OPTS=-Xms2048m -Xmx2048m"
+      - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
       - "discovery.type=single-node"
-    volumes:
-      - /config/elasticsearch/config/:/usr/share/elasticsearch/config/
-      - /config/elasticsearch/data/:/usr/share/elasticsearch/data/
-      - /config/elasticsearch/logs/:/usr/share/elasticsearch/logs/
+  #    volumes:
+  #      - /home/es/data/:/usr/share/elasticsearch/data/
+  #      - /home/es/logs/:/usr/share/elasticsearch/logs/
 
   kibana:
-    image: docker.elastic.co/kibana/kibana:7.2.0
+    image: kibana:1.0
     container_name: kibana
     restart: always
+    build:
+      context: .
+      dockerfile: config/kibana/Dockerfile
     ports:
       - "5601:5601"
-    volumes:
-      - /config/kibana/config/:/usr/share/kibana/config/
     links:
       - "elasticsearch"
     depends_on:
       - elasticsearch
 
   logstash:
-    image: docker.elastic.co/logstash/logstash:7.2.0
+    image: logstash:1.0
     container_name: logstash
     restart: always
+    build:
+      context: .
+      dockerfile: config/logstash/Dockerfile
     ports:
       - "9600:9600"
       - "5043:5043"
       - "5044:5044"
-    volumes:
-      - /config/logstash/config/:/usr/share/logstash/config/
     links:
       - "elasticsearch"
     depends_on:
