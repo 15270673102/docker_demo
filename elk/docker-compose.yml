@@ -41,7 +41,6 @@ services:
     ports:
       - "9600:9600"
       - "5043:5043"
-      - "5044:5044"
     links:
       - "elasticsearch"
     depends_on:
