@@ -3,6 +3,7 @@ services:
   splash:
     image: scrapinghub/splash
     container_name: splash
+    restart: always
     #启动splash服务，并通过http，https，telnet提供服务
     #通常一般使用http模式 ，可以只启动一个8050就好
     #Splash 将运行在 0.0.0.0 at ports 8050 (http), 8051 (https) and 5023 (telnet).
