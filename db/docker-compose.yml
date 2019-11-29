@@ -11,11 +11,11 @@ services:
 
   redis:
     image: redis
-    container_name: redis_demo
+    container_name: redis
     restart: always
-#    command: redis-server --requirepass 123
+    command: redis-server --requirepass 123456
     ports:
-      - 1234:6379
+      - 6379:6379
 
   mongo:
     image: mongo
@@ -28,7 +28,7 @@ services:
       MONGO_INITDB_ROOT_PASSWORD: 123
 
   rabbitmq:
-    image: rabbitmq:3.7-management-alpine
+    image: rabbitmq:3.7.7-management
     container_name: rabbitmq
     restart: always
     ports:

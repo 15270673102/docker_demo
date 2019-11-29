@@ -1,0 +1,11 @@
+version: '3'
+services:
+  scrapydweb:
+    image: scrapydweb:1.0
+    container_name: scrapydweb123
+    restart: always
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "5000:5000"
