@@ -9,3 +9,4 @@ redis
 pymysql
 pika
 selenium
+scrapy_splash
