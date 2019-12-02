@@ -1,6 +1,8 @@
 FROM ryanvin/scrapydweb
 MAINTAINER wangjiayu
 
+RUN cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime && echo 'Asia/Shanghai'>/etc/timezone
+
 #RUN rm -rf /app
 #RUN mkdir -p /app
 
