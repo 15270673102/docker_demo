@@ -2,7 +2,7 @@ version: '3'
 services:
   scrapydweb:
     image: scrapydweb:1.0
-    container_name: scrapydweb123
+    container_name: scrapydweb_wangjiayu
     restart: always
     build:
       context: .

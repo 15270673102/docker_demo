@@ -1,0 +1,11 @@
+scrapy
+scrapyd
+scrapyd-client
+loguru
+requests
+pyquery
+opencv-python
+redis
+pymysql
+pika
+selenium
